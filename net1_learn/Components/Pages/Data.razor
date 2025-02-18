@@ -1,0 +1,19 @@
+@page "/data"
+@using System
+
+<h3>
+    <span class="bi bi-database-nav-menu" aria-hidden="true"></span>
+    Random Data
+</h3>
+
+<p>@randomData</p>
+
+@code {
+    private string randomData;
+
+    protected override void OnInitialized()
+    {
+        var random = new Random();
+        randomData = $"Random Number: {random.Next(1, 100)}";
+    }
+}
